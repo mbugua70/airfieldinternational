@@ -1,0 +1,87 @@
+.hero {
+  padding: var(--space-16) 0;
+  background: var(--bg-secondary);
+}
+
+.contact {
+  padding: var(--space-16) 0;
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+  margin-bottom: var(--space-10);
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.hoursCard {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto var(--space-10);
+}
+
+.hoursIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--space-4);
+  background: var(--accent-gradient);
+  border-radius: var(--radius-full);
+  color: var(--text-primary);
+}
+
+.hoursTitle {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.hoursList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  color: var(--text-secondary);
+}
+
+.support {
+  margin-top: var(--space-2);
+  color: var(--accent-primary);
+  font-weight: 500;
+}
+
+.map {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mapCard {
+  overflow: hidden;
+}
+
+.mapPlaceholder {
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  color: var(--text-tertiary);
+}
+
+.mapPlaceholder span {
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.mapPlaceholder p {
+  font-size: var(--text-sm);
+}

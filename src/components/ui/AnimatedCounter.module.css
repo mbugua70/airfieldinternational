@@ -1,0 +1,38 @@
+.counter {
+  text-align: center;
+}
+
+.value {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .value {
+    font-size: var(--text-5xl);
+  }
+}
+
+.suffix {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.label {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .label {
+    font-size: var(--text-base);
+  }
+}

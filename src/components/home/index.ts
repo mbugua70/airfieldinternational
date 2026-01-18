@@ -1,0 +1,6 @@
+export { default as Hero } from './Hero'
+export { default as ServicesPreview } from './ServicesPreview'
+export { default as FeaturedProducts } from './FeaturedProducts'
+export { default as WhyChooseUs } from './WhyChooseUs'
+export { default as Testimonials } from './Testimonials'
+export { default as CTASection } from './CTASection'

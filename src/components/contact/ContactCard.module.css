@@ -1,0 +1,41 @@
+.link {
+  display: block;
+  text-decoration: none;
+}
+
+.card {
+  text-align: center;
+  height: 100%;
+  transition: all var(--transition-base);
+}
+
+.link:hover .card {
+  background: var(--glass-bg-hover);
+  border-color: var(--accent-primary);
+  transform: translateY(-4px);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto var(--space-4);
+  background: var(--accent-gradient);
+  border-radius: var(--radius-full);
+  color: var(--text-primary);
+}
+
+.label {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.value {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  word-break: break-word;
+}

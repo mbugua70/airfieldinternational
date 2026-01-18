@@ -1,0 +1,78 @@
+.section {
+  padding: var(--space-24) 0;
+}
+
+.card {
+  position: relative;
+  padding: var(--space-12) var(--space-6);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: var(--space-16) var(--space-12);
+  }
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-2xl);
+}
+
+.gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 20%, rgba(99, 102, 241, 0.3), transparent),
+    radial-gradient(ellipse 50% 40% at 80% 80%, rgba(139, 92, 246, 0.3), transparent);
+}
+
+.content {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: var(--text-4xl);
+  }
+}
+
+.description {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-8);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  justify-content: center;
+}
+
+@media (min-width: 480px) {
+  .buttons {
+    flex-direction: row;
+  }
+}

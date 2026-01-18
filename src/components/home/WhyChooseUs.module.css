@@ -1,0 +1,138 @@
+.section {
+  padding: var(--space-24) 0;
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+  }
+}
+
+.content {
+  order: 2;
+}
+
+@media (min-width: 1024px) {
+  .content {
+    order: 1;
+  }
+}
+
+.features {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.feature {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.iconWrapper {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 188, 212, 0.15);
+  border-radius: var(--radius-full);
+  color: var(--accent-primary);
+}
+
+.featureTitle {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.featureDescription {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.visual {
+  order: 1;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .visual {
+    order: 2;
+  }
+}
+
+.imageCard {
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+}
+
+.imagePlaceholder {
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagePlaceholder span {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+}
+
+.floatingCard {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  padding: var(--space-6);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: var(--shadow-xl);
+}
+
+@media (max-width: 1023px) {
+  .floatingCard {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+.floatingContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.floatingNumber {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.floatingText {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
