@@ -1,10 +1,12 @@
+import type { ReactNode } from 'react'
+
 interface IconProps {
   name: string
   size?: number
   className?: string
 }
 
-const icons: Record<string, JSX.Element> = {
+const icons: Record<string, ReactNode> = {
   network: (
     <path
       strokeLinecap="round"

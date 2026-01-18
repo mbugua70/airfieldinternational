@@ -1,4 +1,4 @@
-import { type ReactNode, type HTMLAttributes } from 'react'
+import { forwardRef, type ReactNode, type HTMLAttributes } from 'react'
 import styles from './Card.module.css'
 
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
@@ -7,25 +7,25 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
   padding?: 'none' | 'sm' | 'md' | 'lg'
 }
 
-export default function Card({
-  children,
-  hover = true,
-  padding = 'md',
-  className = '',
-  ...props
-}: CardProps) {
-  const classes = [
-    styles.card,
-    hover && styles.hover,
-    styles[`padding-${padding}`],
-    className,
-  ]
-    .filter(Boolean)
-    .join(' ')
+const Card = forwardRef<HTMLDivElement, CardProps>(
+  ({ children, hover = true, padding = 'md', className = '', ...props }, ref) => {
+    const classes = [
+      styles.card,
+      hover && styles.hover,
+      styles[`padding-${padding}`],
+      className,
+    ]
+      .filter(Boolean)
+      .join(' ')
 
-  return (
-    <div className={classes} {...props}>
-      {children}
-    </div>
-  )
-}
+    return (
+      <div ref={ref} className={classes} {...props}>
+        {children}
+      </div>
+    )
+  }
+)
+
+Card.displayName = 'Card'
+
+export default Card
